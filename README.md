@@ -33,7 +33,7 @@ Para simplificar esse processo, utilizamos a biblioteca deepface, uma ferramenta
 1. Abrir Webcan e ativar reconhecimento de emoções faciais:
    -  1: Use `sudo python emotion.py`.
 2. Abrir Webcan e ativar reconhecimento de carros:
-   -  1: Use `sudo python emotion.py`.
+   -  1: Use `sudo python vehicle.py`.
 
 ## Abordagem
 

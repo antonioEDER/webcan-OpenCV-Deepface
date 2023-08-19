@@ -5,7 +5,6 @@ from deepface import DeepFace
 model = DeepFace.build_model("Emotion")
 
 # Definir lista de emoção
-# emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
 emotion_labels = ['nervoso', 'desgosto', 'medo', 'feliz', 'triste', 'surpredo', 'neutro']
 
 # Carregar classificador de cascata facial
@@ -37,7 +36,7 @@ while True:
         # Remodele a imagem para corresponder à forma de entrada do modelo
         reshaped_face = normalized_face.reshape(1, 48, 48, 1)
 
-        # Predict emotions using the pre-trained model
+        # busca emoções usando o modelo pré-treinado
         preds = model.predict(reshaped_face)[0]
 
         emotion_idx = preds.argmax()
@@ -45,9 +44,9 @@ while True:
         #Pega o index e busca na lista de emoções
         emotion = emotion_labels[emotion_idx]
 
-        # Draw rectangle around face and label with predicted emotion
+        # Desenhe um retângulo ao redor do rosto e marque com a emoção prevista
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 15, 65), 2)
-        cv2.putText(frame, emotion, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 15, 65), 2)
+        cv2.putText(frame, emotion, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 15, 65), 2)
 
     # Exibir o quadro resultante
     cv2.imshow('Real-time Emotion Detection', frame)
@@ -56,6 +55,6 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Release the capture and close all windows
+# Solte a captura e feche todas as janelas
 cap.release()
 cv2.destroyAllWindows()

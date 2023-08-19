@@ -20,7 +20,8 @@ while True:
 
     cv2.imshow('Real-time Detection', frames )
     
-    if cv2.waitKey(33) == 27:
+    # Press 'q' to exit
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 # De-allocate any associated memory usage

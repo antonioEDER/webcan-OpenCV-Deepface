@@ -1,5 +1,0 @@
-opencv-python
-deepface
-
-#sudo python emotion.py
- #python3 -m jupyterlab
