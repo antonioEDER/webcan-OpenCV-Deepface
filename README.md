@@ -13,8 +13,7 @@ Para simplificar esse processo, utilizamos a biblioteca deepface, uma ferramenta
 2. Acesse o diretório do projeto: Execute `cd webcan-OpenCV-Deepface`.
 
 3. Instale as dependências necessárias:
-   -  1: Use `pip install -r requirements.txt`.
-   -  2: Instale as dependências individualmente:
+   -  1: Instale as dependências individualmente:
      - `pip install deepface`
      - `pip install opencv-python`
 
