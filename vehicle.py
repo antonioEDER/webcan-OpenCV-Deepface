@@ -18,6 +18,7 @@ while True:
     for (x, y, w, h) in cars:
         cv2.rectangle(frames, (x, y), (x+w, y+h), (0, 0, 255), 2)
 
+    # Exibir o quadro resultante com o TITULO e frame
     cv2.imshow('Real-time Detection', frames )
     
     # Press 'q' to exit

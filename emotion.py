@@ -48,7 +48,7 @@ while True:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 15, 65), 2)
         cv2.putText(frame, emotion, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 15, 65), 2)
 
-    # Exibir o quadro resultante
+    # Exibir o quadro resultante com o TITULO e frame
     cv2.imshow('Real-time Emotion Detection', frame)
 
     # Press 'q' to exit
